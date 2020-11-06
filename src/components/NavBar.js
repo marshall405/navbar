@@ -1,31 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import '../styles/nav.css'
 
-const header = {
-    margin: '0',
-    padding: '10px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-}
-const ul = {
-    display: 'flex',
-    listStyle: 'none'
-}
-const li = {
-    margin: '0 10px',
-}
 function NavBar({ logo, links }) {
     return (
-        <header style={header}>
+        <header className="nav-container">
             <h1 className="logo">{logo}</h1>
             <nav>
-                <ul style={ul} className="nav-links">
+                <ul className="nav-links">
                     {
                         links.map(link => {
                             return (
-                                <li style={li}><a href={`/${link}`}> {link} </a></li>
+                                <li><a href={`/${link}`}> {link} </a></li>
                             )
                         })
                     }
