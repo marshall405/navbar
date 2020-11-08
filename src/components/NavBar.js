@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 import '../styles/nav.css'
 
 function NavBar({ logo, links }) {
+    if(links.length === 0){
+        links = ['about', 'contact', 'projects']
+    }
     return (
         <header className="nav-container">
             <h1 className="logo">{logo}</h1>
